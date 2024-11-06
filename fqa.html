@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Car Service Station</title>
+    <link href="css/terms.css" rel="stylesheet">
+
+    <script>
+        function redirectToHome() {
+            window.location.href = "index.html";  // Change this to your actual home page URL
+        }
+    </script>
+</head>
+<body>
+
+<div class="terms-box">
+    <div class="terms-text">
+    <h1>Frequently Asked Questions (FAQs)</h1>
+
+    <div class="faq-item">
+        <button class="faq-question">1. How do I book a car service?</button>
+        <div class="faq-answer">
+            <p>You can book a car service by visiting our <a href="appointment.html">Book Now</a> page, selecting your service, and filling out the booking form. We will confirm your appointment via email.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">2. What are the types of services you offer?</button>
+        <div class="faq-answer">
+            <p>We offer three main packages: Basic Cleaning, Deluxe Cleaning, and Premium Cleaning. For more details, visit our <a href="service.html">Services</a> page.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">3. Can I reschedule my appointment?</button>
+        <div class="faq-answer">
+            <p>Yes, you can reschedule your appointment by contacting us at least 24 hours in advance. You can call us at 0720621067 or email us at auraservicestation@gmail.com.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">4. What payment methods do you accept?</button>
+        <div class="faq-answer">
+            <p>We accept all major credit/debit cards, as well as online payments via PayPal and other methods. You can choose to pay online or in-person at our service station.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">5. Do you offer any discounts for regular customers?</button>
+        <div class="faq-answer">
+            <p>Yes, we offer discounts for regular customers and loyalty rewards.</p>
+        </div>
+    </div>
+
+    <div class="button-back"></div>
+            <button class="btn-back red-btn" onclick="redirectToHome()">Back </button>
+
+</div>
+
+</div>
+
+<script>
+    // Get all elements with the class 'faq-question'
+    var questions = document.querySelectorAll('.faq-question');
+
+    // Loop through each question
+    questions.forEach(function (question) {
+        question.addEventListener('click', function () {
+            // Toggle the active class to open/close the answer
+            this.classList.toggle('active');
+
+            // Get the next element (the answer)
+            var answer = this.nextElementSibling;
+
+            // If the answer is open, close it, otherwise open it
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
